@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "firechats-941e2": {
+      "hosting": {
+        "javistore": [
+          "firechats-941e2"
+        ]
+      }
+    }
+  }
+}

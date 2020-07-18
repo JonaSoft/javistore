@@ -1,0 +1,54 @@
+<nav id="navegador" class="navbar navbar-expand-lg navbar-dark "
+ style=" background: #000428;  /* fallback for old browsers */
+ background: -webkit-linear-gradient(to right, #004e92, #000428);  
+ background: linear-gradient(to right, #004e92, #000428); ; max-height:auto;">
+  <!--imagen del navbar-->
+  
+  <!--<img src="../../../assets/img/tienda.jpg" alt="" with="50" height="50"class="rounded-circle">-->
+
+  <a class="navbar-brand text-gray  text-decoration-none " >
+    <img src="../../../assets/img/logo1.jpg" class="img-thumbnail"alt=""style="width:150px; height:80px;">
+    
+  </a>
+  <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ">
+      <li class="nav-item " routerLinkActive="active">
+        <a class="nav-link " routerLink="inicio" style="font-family:'Arbutus', cursive;font-size:16px;color:yellow;">Inicio </a>
+      </li>
+      <li class="nav-item "  routerLinkActive="active">
+        <a class="nav-link " routerLink="contacto" style="font-family:'Arbutus', cursive;font-size:16px;color:yellow;">Contáctame</a>
+      </li>
+      <!--<li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>-->
+     
+    </ul>
+    
+  </div>
+  <form class="form-inline  my-2 my-lg-0">
+    <input (keyup.enter)="buscador(forma.value)"#forma
+        id="inputbuscar"
+        class="form-control mr-sm-2 " type="search"
+        placeholder=""
+        value:forma.value
+        aria-label="Search"
+        style="font-family:'Arbutus';" >
+    <button (click)="buscador(forma.value)"
+        class="btn btn-dark my-2 my-sm-0" type="button" style="font-family:'Arbutus', cursive;font-size:14px;width:100px; color:white">
+        <app-loading *ngIf="activa"></app-loading>
+        <span *ngIf="!activa"><i class="fa fa-search fa-2x" aria-hidden="true"></i></span>
+    </button>
+  </form>
+</nav>
+<div *ngIf="mensaje" class="alert alert-warning text-center" role="alert">
+  Sin resultados en tu busqueda!!! Tambien tenemos estos productos; quizá te puedan interesar... 
+</div>
+<!--<app-carousel  *ngIf="!activa"></app-carousel>-->
+<!--<app-loading *ngIf="activa"></app-loading>-->
+
+
+    
+  

@@ -1,0 +1,74 @@
+<!--<ul>
+    <li class="text" *ngFor="let item of chats | async">
+      {{item.mensaje}}
+    </li>
+</ul>
+<h2 class="text-center mt-2"style="color:#1137BB ;font-family:Carter One;">!!! HOLA !!! en que te puedo servir? </h2>-->
+
+
+<div class="container-fluid animated fadeIn fast ">
+  <div class="row">
+     
+      <div class="col-md-12 container-fluid bg-white chat-window  p-2">
+        <div class="container app-mensajes " id="app-mensajes">
+
+          <div *ngFor="let chat of _cs.chats">
+              <div [ngClass]="{'text-left ':_cs.usuario.nombre != chat.nombre,
+                          'text-right': _cs.usuario.nombre == chat.nombre }">
+                    <span class="badge contactochat"
+                          [ngClass]="{ 'badge-primary':_cs.usuario.nombre == chat.nombre,
+                                      'badge-success':_cs.usuario.nombre != chat.nombre }">
+                        {{chat.nombre}}
+                    </span>
+                <div >
+                    <span style="font-size:12px;color:gray">
+                          [{{chat.fecha | date:'medium'}}] dice:
+                    </span>
+                </div>
+                    <p>{{chat.mensaje}}</p>
+              </div>
+          </div>
+         
+          
+        </div> 
+       
+        
+        <div class="container-fluid mt-2 ">
+       
+          <input type="text" name="mensaje"style="border-radius:10px;"
+            class="form-control mt-2"
+            [(ngModel)]="mensaje"
+            (keyup.enter)="enviarMensaje()"
+            placeholder = "Tu mensaje..."
+          >
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6 col-sm-12">
+                
+                <button
+                  (click)="enviarMensaje()"
+                  class="btn btn-primary btn-block mt-3 ">
+                  Enviar Mensaje
+                </button>    
+              
+              </div>
+              <div class="col-md-6 col-sm-12">
+                  <button
+                    (click)="_cs.logout()" 
+                    class="btn btn-danger btn-block mt-3" >
+                    Cerrar Sesión 
+                  </button>
+              </div>
+              
+            </div>
+            
+            
+          </div>
+          
+         
+        </div>
+        <br>
+      </div>
+     
+  </div>
+</div>

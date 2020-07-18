@@ -1,0 +1,85 @@
+body{
+    width: 100%;
+   }
+   .columna{
+     border:1px #313030 solid;
+   }
+   .medida{
+     height: 150px;
+     width:300px;
+     
+     margin-top: 5px;
+     border-radius:5px;
+   }
+   
+   p{
+     font-size:0.9rem;
+     font-family: 'Arbutus', cursive;
+     color:white;
+   }
+   a{
+     text-decoration: none;
+     font-family:'Averia+Gruesa';
+      font-size:14px;
+      color:rgb(247, 251, 13)
+   }
+   h5{
+      text-align: center;
+      color:white;
+      font-family:'Arbutus', cursive; 
+   }
+   
+   .footerfinal{
+      
+      width: 100%;
+      height:auto;
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+      order:3;
+      opacity:0.75;
+   }
+   
+   #piePagina{
+      
+      width: 100%;
+      
+      height: auto;
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+      color: white
+   
+   }
+   
+   p{
+      color:white;
+   
+   }
+  
+   /* Animaciones */
+
+.animated {
+    -webkit-animation-duration: 5s;
+    animation-duration: s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fast {
+    -webkit-animation-duration: 0.9s;
+    animation-duration: 0.9s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
